@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q4 Drill 2</title>
+    <title>Q4 Drill 2 Heat Index</title>
+ <style>
+        body {
+            background-image: url(https://www.shutterstock.com/image-illustration/background-grainy-concept-black-orange-600nw-2685375159.jpg);
+            font-family: Arial, sans-serif;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            max-width: 400px;
+            margin: auto;
+            border-radius: 15px;
+            background: #1e1e2f;
+            color: white;
+        }
+
+        input {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+<div class="container text-center mt-5">
+
+    <h1 class="title">Heat Index Checker</h1>
+
+   
+    <button class="btn btn-info mb-3" onclick="toggleInstructions()">Show Instructions</button>
+
+    <p id="instructions" style="display:none;">
+        Enter temperature (°C) and humidity (%), then click check to see the heat index and its status.
+    </p>
+
+    <div class="card p-4 shadow-lg">
+
+        <label>Degree in °C</label>
+        <input type="number" id="temp" class="form-control mb-3" placeholder="Enter temperature">
+
+        <label>Humidity in %</label>
+        <input type="number" id="humidity" class="form-control mb-3" placeholder="Enter humidity">
+
+        <button class="btn btn-warning" onclick="computeHeatIndex()">Check</button>
+
+    </div>
+
+    <p class="mt-4">
+        Source:
+        <a href="https://www.pagasa.dost.gov.ph/weather/heat-index" target="_blank">Heat Index Chart</a>
+    </p>
+
+</div>
+
+
 </body>
 </html>
